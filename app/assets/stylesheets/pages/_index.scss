@@ -1,2 +1,86 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "show";
+
+.banner {
+  background-position: center;
+  padding: 150px 0;
+  position: relative;
+  text-align: end;
+
+  h1 {
+    position: absolute;
+    right: 160px;
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 80px;
+    font-weight: bold;
+  }
+
+  p {
+    width: 500px;
+    position: absolute;
+    right: 160px;
+    top: 250px;
+    font-size: 20px;
+    color: white;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+
+  a {
+    position: absolute;
+    right: 160px;
+    top: 320px;
+    padding: 12px;
+    background-color: white;
+    color: black;
+    border-radius:8px;
+    text-decoration: none;
+  }
+
+}
+
+.title-font {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.body-font {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cocktail-card {
+  background-size: cover;
+  background-position: center;
+  height: 285px;
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  position: relative;
+
+  h3 {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    position: absolute;
+    top: 10px;
+  }
+}

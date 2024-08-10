@@ -1,0 +1,12 @@
+<h1>Cocktails#show</h1>
+<p>Find me in app/views/cocktails/show.html.erb</p>
+
+<div class="container">
+  <div class="cards">
+    <div class="cocktail-card-show d-flex" style="background-image: url('<%= @cocktail.photo.attached? ? cl_image_path(@cocktail.photo.key) : image_path('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU') %>')">
+    <h2><%= link_to @cocktail.name, cocktail_path(@cocktail), class: "text-decoration-none text-white" %></h2>
+  </div>
+  <div>
+  <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail) %>
+  </div>
+</div>
