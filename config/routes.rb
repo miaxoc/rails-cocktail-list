@@ -7,4 +7,12 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :doses, only: [:destroy]
+  resources :cocktails, only: [:destroy]
+
+  resources :cocktails, only: [:index, :show, :new, :create] do
+    resources :doses, only: [:new, :create]
+  end
+
+  root to: 'cocktails#index'
 end
