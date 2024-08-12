@@ -1,26 +1,22 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://punchdrink.com/wp-content/uploads/2021/04/Social-Bring-Back-Yolanda-Martini-Cocktail-Recipe.jpg); height: 600px;">
-  <div class="container">
+<div class="index-view d-flex bg-white">
+
+  <div class="left-img">
+    <%= image_tag("cocktails.jpg", height: 800) %>
+  </div>
+
+  <div class="right-txt m-5">
+
     <h1 class="title-font">COCKTAIL LIST</h1>
-    <p>Easy platform to compile a list of your favourite cocktails and their recipes</p>
-    <%= link_to 'Add New Cocktail', 'cocktails/new', class: "body-font" %>
+    <p class="body-font">Easy platform to compile a list of your favourite cocktails and their recipes</p>
+    <%= link_to 'Add New Cocktail', 'cocktails/new', class: "add-btn" %>
+
+    <div class="cards m-5">
+      <% @cocktails.each do |cocktail| %>
+        <div class="cocktail-card d-flex" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cocktail.photo.attached? ? cl_image_path(cocktail.photo.key) : image_path('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU') %>')">
+          <h3><%= link_to cocktail.name, cocktail_path(cocktail), class: "text-decoration-none text-white" %></h3>
+        </div>
+      <% end %>
+    </div>
+
   </div>
-</div>
-
-
-
-<div class="container">
-  <h1>Cocktails#index</h1>
-  <p>Find me in app/views/cocktails/index.html.erb</p>
-
-  <div>
-  <%= link_to 'ADD NEW COCKTAIL', 'cocktails/new'%>
-  </div>
-
-  <div class="cards m-5">
-  <% @cocktails.each do |cocktail| %>
-    <div class="cocktail-card d-flex" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cocktail.photo.attached? ? cl_image_path(cocktail.photo.key) : image_path('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU') %>')">
-    <h3><%= link_to cocktail.name, cocktail_path(cocktail), class: "text-decoration-none text-white" %></h3>
-  <% end %>
-  </div>
-
 </div>
