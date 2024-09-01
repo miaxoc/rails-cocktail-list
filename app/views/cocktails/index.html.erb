@@ -1,20 +1,23 @@
-<div class="index-view d-flex bg-white">
+<div class="index-view d-flex">
 
-  <div class="left-img">
-    <%= image_tag("cocktails.jpg", height: 800) %>
+  <div class="left-side">
+    <%= image_tag("cocktails.jpg") %>
   </div>
 
-  <div class="right-txt m-5">
+  <div class="right-side">
+    <div class="top-text">
+      <h1>COCKTAIL LIST</h1>
+      <h2>Easy platform to compile a list of your favourite cocktails and their recipes</h2>
+      <%= link_to 'Add New Cocktail', 'cocktails/new', class: "add-btn" %>
+    </div>
 
-    <h1 class="title-font">COCKTAIL LIST</h1>
-    <p class="body-font">Easy platform to compile a list of your favourite cocktails and their recipes</p>
-    <%= link_to 'Add New Cocktail', 'cocktails/new', class: "add-btn" %>
-
-    <div class="cards m-5">
+    <div class="cards">
       <% @cocktails.each do |cocktail| %>
         <div class="cocktail-card d-flex" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cocktail.photo.attached? ? cl_image_path(cocktail.photo.key) : image_path('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU') %>')">
           <h3><%= link_to cocktail.name, cocktail_path(cocktail), class: "text-decoration-none text-white" %></h3>
+          <%= link_to '', cocktail_path(cocktail), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "fa-solid fa-trash text-red" %>
         </div>
+
       <% end %>
     </div>
 

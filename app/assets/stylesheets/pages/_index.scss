@@ -20,9 +20,7 @@
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  display: flex;
   position: relative;
 
   h3 {
@@ -35,22 +33,31 @@
 }
 
 .index-view {
-  position: relative;
 
-  .left-img {
-    position: sticky;
-    top: 0;
-    width: 300px;
-    height: 300px;
-    position: sticky;
-    height: 500;
+
+  .left-side {
+    height: 100vh;
+    background-color: red;
+    margin-right: 16px;
+
+    img {
+      height: 100%;
+      position: sticky;
+      top: 0;
+    }
+
   }
 
-  .right-txt {
+  .right-side {
     text-align: end;
-    position: absolute;
-    right: 0;
+
+    margin: 32px;
+
+    .top-text {
+
+    }
   }
+
   .add-btn {
     padding: 12px;
     color: white;
@@ -60,19 +67,5 @@
     padding: 12px;
   }
 
-  .title-font {
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 80px;
-    font-weight: bold;
-  }
 
-  .body-font {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 20px;
-    font-weight: bold;
-  }
 }
