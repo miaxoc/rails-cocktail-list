@@ -3,42 +3,12 @@
 @import "show";
 
 
-.cocktail-card {
-  background-size: cover;
-  background-position: center;
-  height: 285px;
-  width: 190px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.cards {
-  display: flex;
-  position: relative;
-
-  h3 {
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    position: absolute;
-    top: 10px;
-  }
-}
-
 .index-view {
-
 
   .left-side {
     height: 100vh;
     background-color: red;
-    margin-right: 16px;
+
 
     img {
       height: 100%;
@@ -49,23 +19,74 @@
   }
 
   .right-side {
-    text-align: end;
-
-    margin: 32px;
+    background-color: white;
+    padding-top: 40px;
+    padding-right: 80px;
+    padding-left: 80px;
 
     .top-text {
+      text-align: end;
+
+      h2 {
+        margin-bottom: 16px;
+      }
+
+
+
 
     }
+
+    .add-btn {
+      width: 100%;
+      border-radius:8px;
+      background-color: black;
+      margin: 0 auto;
+      text-align: center;
+      padding: 8px;
+    }
+
+
+    .cards {
+      margin-top:32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 16px;
+
+      .cocktail-card {
+        background-color: red;
+        border: 1px black solid;
+      }
+
+
+      h3 {
+
+      }
+
+      .card-left {
+        margin: 16px;
+        background-color: red;
+        background-size: cover;
+        background-position: center;
+        width: 50%;
+        color: white;
+        border-radius: 8px;
+      }
+
+      .card-right {
+        margin: 16px;
+        background-color: black;
+        height: 285px;
+        width: 50%;
+        border-radius: 8px;
+      }
+
+
+    }
+
+
+
   }
 
-  .add-btn {
-    padding: 12px;
-    color: white;
-    border-radius:8px;
-    text-decoration: none;
-    background-color: black;
-    padding: 12px;
-  }
 
 
 }
