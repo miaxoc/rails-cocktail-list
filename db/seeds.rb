@@ -9,6 +9,31 @@
 #   end
 
 # db/seeds.rb
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
+Ingredient.create(name: 'lemon')
+Ingredient.create(name: 'ice')
+Ingredient.create(name: 'Mint leaves')
+
+# cosmopolitan
+Ingredient.create(name: 'Vodka Citron')
+Ingredient.create(name: 'Cranberry Juice')
+Ingredient.create(name: 'Cointreau')
+Ingredient.create(name: 'Fresh lime juice')
+
+# Aperol
+Ingredient.create(name: 'Aperol')
+Ingredient.create(name: 'Prosecco')
+Ingredient.create(name: 'Soda water')
+
+# Mojito
+Ingredient.create(name: 'White Rum')
+Ingredient.create(name: 'Sugar')
+# Ingredient.create(name: 'Soda water')
+# Ingredient.create(name: 'Fresh lime juice')
+# Ingredient.create(name: 'Mint leaves')
+
+
+# Espresso Martini
+Ingredient.create(name: 'Vodka')
+Ingredient.create(name: 'Kahlúa')
+Ingredient.create(name: 'Sugar syrup')
+Ingredient.create(name: 'Espresso')

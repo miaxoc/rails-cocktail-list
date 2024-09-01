@@ -9,4 +9,8 @@
   <div>
   <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail) %>
   </div>
+
+  <% @doses.each do |dose| %>
+    <p><%= dose.ingredient.name %>: <%= dose.description %></p>
+  <% end %>
 </div>

@@ -5,9 +5,12 @@ class DosesController < ApplicationController
   end
 
   def create
-    @dose = Dose.new(dose_params)
+    @cocktail = Cocktail.find(params[:cocktail_id])
+    @dose = @cocktail.doses.build(dose_params)
+    # @dose.cocktail = @cocktail
     if @dose.save
-      return redirect_to dose_path(@dose)
+      redirect_to cocktail_path(@cocktail)
+      # redirect_to @cocktail
     else
       render 'new', status: :unprocessable_entity
     end
@@ -22,6 +25,7 @@ class DosesController < ApplicationController
   private
 
   def dose_params
-    params.require(:dose).permit(:cocktail_id, :description)
+    params.require(:dose).permit(:ingredient_id, :description)
   end
+
 end
