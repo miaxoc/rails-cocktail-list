@@ -8,12 +8,14 @@
   .left-side {
     height: 100vh;
     background-color: red;
+    position: sticky;
+    top: 0px;
+    bottom: 0px;
 
 
     img {
       height: 100%;
-      position: sticky;
-      top: 0;
+
     }
 
   }
@@ -30,9 +32,6 @@
       h2 {
         margin-bottom: 16px;
       }
-
-
-
 
     }
 
@@ -51,10 +50,55 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 16px;
+      // column-gap: 50px;
 
       .cocktail-card {
-        background-color: red;
+        background-color: black;
         border: 1px black solid;
+        border-radius: 24px;
+
+
+        .card-left {
+          margin-right: 8px;
+          margin-top: 16px;
+          margin-bottom: 16px;
+          margin-left: 16px;
+          background-color: red;
+          background-size: cover;
+          background-position: center;
+          width: 50%;
+          color: white;
+          border-radius: 8px;
+          border: 1px white solid;
+          padding: 16px;
+          text-align: center;
+
+
+        }
+
+        .card-right {
+          margin-left: 8px;
+          margin-top: 16px;
+          margin-bottom: 16px;
+          margin-right: 16px;
+          padding: 16px;
+          background-color: black;
+          height: 285px;
+          width: 50%;
+          border-radius: 8px;
+          border: 1px white solid;
+          position: relative;
+
+          .delete-icon {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+          }
+
+
+        }
+
+
       }
 
 
@@ -62,23 +106,7 @@
 
       }
 
-      .card-left {
-        margin: 16px;
-        background-color: red;
-        background-size: cover;
-        background-position: center;
-        width: 50%;
-        color: white;
-        border-radius: 8px;
-      }
 
-      .card-right {
-        margin: 16px;
-        background-color: black;
-        height: 285px;
-        width: 50%;
-        border-radius: 8px;
-      }
 
 
     }
