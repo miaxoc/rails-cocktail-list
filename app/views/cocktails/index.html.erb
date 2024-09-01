@@ -25,6 +25,7 @@
             <h3><%= link_to cocktail.name, cocktail_path(cocktail), class: "text-decoration-none text-white" %></h3>
 
 
+
             <%= link_to '', cocktail_path(cocktail), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "fa-solid fa-xmark delete-icon" %>
           </div>
         </div>
