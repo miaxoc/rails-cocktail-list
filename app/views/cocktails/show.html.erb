@@ -7,14 +7,19 @@
 
   <div class="right-side">
     <h1><%= @cocktail.name.upcase %></h1>
-    <p>Find me in app/views/cocktails/show.html.erb</p>
+
+    <% @cocktail.doses.each do |dose| %>
+      <p><%= dose.ingredient.name %>: <%= dose.description %></p>
+    <% end %>
+
+    <p><%= @cocktail.cocktaildescription %></p>
+
+
     <div>
       <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail) %>
     </div>
     <% @cocktail.doses.each do |dose| %>
       <p><%= dose.ingredient.name %>: <%= dose.description %></p>
     <% end %>
-
-    <p><%= @cocktail.cocktaildescription %></p>
   </div>
 </div>
