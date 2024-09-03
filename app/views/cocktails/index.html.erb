@@ -7,7 +7,7 @@
   <div class="right-side">
     <div class="top-text">
       <h1>COCKTAIL LIBRARY</h1>
-      <h2>Easy platform to compile a list of your favourite cocktails and their recipes</h2>
+      <p>Easy platform to compile a list of your favourite cocktails and their recipes</p>
 
     </div>
 
@@ -23,6 +23,7 @@
           </div>
           <div class="card-right">
             <h3><%= link_to cocktail.name, cocktail_path(cocktail), class: "text-decoration-none text-white" %></h3>
+            <p class="text-white text-start"><%= cocktail.cocktaildescription[0..160] %>... <%= link_to 'more',cocktail_path(cocktail), style: "color: white;" %> </p>
 
 
 
