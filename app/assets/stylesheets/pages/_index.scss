@@ -20,7 +20,8 @@
   }
 
   .right-side {
-    background-color: white;
+    background: rgb(255,252,242);
+    background: radial-gradient(circle, rgba(255,252,242,1) 0%, rgba(243,241,253,1) 51%, rgba(252,238,241,1) 100%);
     padding-top: 40px;
     padding-right: 80px;
     padding-left: 80px;
@@ -38,7 +39,7 @@
     .add-btn {
       width: 100%;
       border-radius:8px;
-      background-color: black;
+      background-color: #222125;
       margin: 0 auto;
       text-align: center;
       padding: 8px;
@@ -53,8 +54,8 @@
       // column-gap: 50px;
 
       .cocktail-card {
-        background-color: black;
-        border: 1px black solid;
+        background-color: #222125;
+        border: 1px #222125 solid;
         border-radius: 24px;
 
         .card-left {
@@ -80,7 +81,7 @@
           margin-bottom: 16px;
           margin-right: 16px;
           padding: 16px;
-          background-color: black;
+          background-color: #222125;
           height: 285px;
           width: 50%;
           border-radius: 8px;
