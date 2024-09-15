@@ -28,19 +28,28 @@ $border-radius-xxl:           1rem;
 // Override other variables below!
 
 body {
+  background-color: #FFFDF1;
+
   h1 {
-    font-size: 80px;
+    font-size: 120px;
   }
 
   h2 {
-    font-size: 36px;
+    font-size: 80px;
   }
 
   h3 {
-    font-size: 24px;
+    font-size: 36px;
   }
 
-  h1, h2, h3, h4, h5, p {
-    color: #222125;
+  h1, h2, h3 {
+    color: #000000;
+    font-weight: 700;
+  }
+
+  p {
+    color: #000000;
+    font-weight: 400;
+
   }
 }
