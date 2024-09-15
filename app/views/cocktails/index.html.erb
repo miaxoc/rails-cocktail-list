@@ -1,15 +1,10 @@
-<div class="index-view d-flex">
+<div class="index-view">
 
-  <div class="left-side">
-    <%= image_tag("cocktails.jpg") %>
-  </div>
-
-  <div class="right-side">
     <div class="top-text">
       <h1>COCKTAIL LIBRARY</h1>
-      <p>Easy platform to compile a list of your favourite cocktails and their recipes</p>
-
     </div>
+
+  <div class="right-side">
 
     <div class="add-btn">
       <%= link_to 'Add New Cocktail', 'cocktails/new', style:"text-decoration: none; color: white;" %>
@@ -18,16 +13,14 @@
     <div class="cards">
       <% @cocktails.each do |cocktail| %>
         <div class="cocktail-card d-flex">
-          <div class="card-left d-flex justify-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cocktail.photo.attached? ? cl_image_path(cocktail.photo.key) : image_path('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU') %>')">
-            <h3><%# link_to cocktail.name, cocktail_path(cocktail), class: "text-decoration-none text-white" %></h3>
+          <div class="card-left d-flex justify-content-center" style="background-image: url('<%= cocktail.photo.attached? ? cl_image_path(cocktail.photo.key) : image_path('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU') %>')">
+          <%= link_to '', cocktail_path(cocktail), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "fa-solid fa-xmark delete-icon" %>
           </div>
+
           <div class="card-right">
-            <h3><%= link_to cocktail.name, cocktail_path(cocktail), class: "text-decoration-none text-white" %></h3>
-            <p class="text-white text-start"><%= cocktail.cocktaildescription[0..160] %>... <%= link_to 'more',cocktail_path(cocktail), style: "color: white;" %> </p>
+            <h3><%= link_to cocktail.name.upcase, cocktail_path(cocktail), class: "text-decoration-none text-black" %></h3>
+            <p class="text-start"><%= cocktail.cocktaildescription[0..200] %>... <%= link_to 'more',cocktail_path(cocktail), style: "text-decoration: none; color: #4E2FFE;" %> </p>
 
-
-
-            <%= link_to '', cocktail_path(cocktail), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "fa-solid fa-xmark delete-icon" %>
           </div>
         </div>
       <% end %>

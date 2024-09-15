@@ -1,22 +1,32 @@
-
-<div class="show-view d-flex">
-
-  <div class="left-side">
-    <%= cl_image_tag @cocktail.photo.key %>
+<div class="show-view ">
+  <div class="top-text">
+    <h1><%= @cocktail.name.upcase %></h1>
   </div>
 
-  <div class="right-side">
-    <h1><%= @cocktail.name.upcase %></h1>
+  <div class="d-flex justify-content-center">
 
-    <div id="description">
-      <p><%= @cocktail.cocktaildescription %></p>
+    <div class="left-side">
+      <%= cl_image_tag @cocktail.photo.key %>
     </div>
 
-    <div>
-      <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail) %>
+    <div class="right-side">
+      <div class="text-title">
+        <% if @cocktail.name.start_with?('A' || 'a') %>
+          <h3>What is an <%= @cocktail.name %>?</h3>
+        <% else %>
+          <h3>What is a <%= @cocktail.name %>?</h3>
+        <% end %>
+      </div>
+      <div id="description">
+        <p><%= @cocktail.cocktaildescription %></p>
+      </div>
+
+      <div class="text-title">
+        <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail) %>
+      </div>
+      <% @cocktail.doses.each do |dose| %>
+        <p><%= dose.ingredient.name %>: <%= dose.description %></p>
+      <% end %>
     </div>
-    <% @cocktail.doses.each do |dose| %>
-      <p><%= dose.ingredient.name %>: <%= dose.description %></p>
-    <% end %>
   </div>
 </div>
