@@ -1,10 +1,13 @@
 <div class="index-view">
 
+  <br>
   <div class="top-text">
-    <h1>COCKTAIL LIBRARY</h1>
+    <h1 id="app-heading">COCKTAIL LIBRARY</h1>
   </div>
 
   <!-- Slideshow container -->
+  <br>
+
   <div class="slideshow-container">
 
     <% @cocktails.each do |cocktail| %>
@@ -26,10 +29,10 @@
   </div>
 
 
-  <div class="cocktail-index">
-
+  <div id="cocktail-index">
+    <h2 class="text-center">ALL COCKTAILS </h2>
     <div class="add-btn">
-      <%= link_to 'Add New Cocktail', 'cocktails/new', style:"text-decoration: none; color: white;" %>
+      <%= link_to '+ Add New Cocktail', 'cocktails/new', style:"text-decoration: none; color: black;" %>
     </div>
 
     <div class="cards">
