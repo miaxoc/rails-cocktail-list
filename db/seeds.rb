@@ -14,17 +14,20 @@ Ingredient.create(name: 'ice')
 Ingredient.create(name: 'Mint leaves')
 
 # cosmopolitan
+# 1 1/2 oz Vodka Citron, 1 oz Cranberry juice, 1/2 oz Cointreau, 1/2 oz Fresh lime juice
 Ingredient.create(name: 'Vodka Citron')
 Ingredient.create(name: 'Cranberry Juice')
 Ingredient.create(name: 'Cointreau')
 Ingredient.create(name: 'Fresh lime juice')
 
 # Aperol
+#1 1/4 oz Aperol, 2 oz Prosecco, Splash of Soda water
 Ingredient.create(name: 'Aperol')
 Ingredient.create(name: 'Prosecco')
 Ingredient.create(name: 'Soda water')
 
 # Mojito
+#1 1/2 oz White rum, 1 oz Fresh lime juice, 2 teaspoons Sugar, 6 leaves of Mint, Soda Water
 Ingredient.create(name: 'White Rum')
 Ingredient.create(name: 'Sugar')
 # Ingredient.create(name: 'Soda water')
@@ -32,7 +35,7 @@ Ingredient.create(name: 'Sugar')
 # Ingredient.create(name: 'Mint leaves')
 
 # Espresso Martini
+# 2oz vodka 1oz Kahlua 1oz espresso
 Ingredient.create(name: 'Vodka')
 Ingredient.create(name: 'Kahlúa')
-Ingredient.create(name: 'Sugar syrup')
 Ingredient.create(name: 'Espresso')
