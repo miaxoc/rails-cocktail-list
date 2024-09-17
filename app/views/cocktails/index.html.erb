@@ -1,10 +1,32 @@
 <div class="index-view">
 
-    <div class="top-text">
-      <h1>COCKTAIL LIBRARY</h1>
-    </div>
+  <div class="top-text">
+    <h1>COCKTAIL LIBRARY</h1>
+  </div>
 
-  <div class="right-side">
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <% @cocktails.each do |cocktail| %>
+      <div class="mySlides fade">
+        <%= cocktail.photo.attached? ? cl_image_tag(cocktail.photo.key, style: "width: 400px; display: block; margin: auto;") : image_tag('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU', style: "width: 300px; display: block; margin: auto;") %>
+
+        <div class="text"><h3><%= cocktail.name %></h3></div>
+      </div>
+    <% end %>
+
+  </div>
+
+  <br>
+
+  <div style="text-align:center">
+    <% @cocktails.each_with_index do |cocktail, index| %>
+      <span class="dot" onclick="currentSlide(<%= index + 1 %>)"></span>
+    <% end %>
+  </div>
+
+
+  <div class="cocktail-index">
 
     <div class="add-btn">
       <%= link_to 'Add New Cocktail', 'cocktails/new', style:"text-decoration: none; color: white;" %>
