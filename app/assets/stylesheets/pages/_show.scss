@@ -17,15 +17,10 @@
     width: 700px;
 
     .text-title {
-
-      h3 {
-        background-color: #4E2FFE;
-        color: white;
-        padding: 8px;
-      }
-
+      border: 1px solid #4E2FFE;
+      color: #4E2FFE;
+      padding: 8px;
     }
-
 
     #description {
 
@@ -34,10 +29,19 @@
       border-radius: 32px;
       font-size: 16px;
     }
+
+    .fa-plus{
+      display:inline-block;
+      font-size: 30px;
+      line-height: 40px;
+      color:#4E2FFE;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      vertical-align: bottom;
+    }
+
+
   }
-
-
-
-
 
 }
