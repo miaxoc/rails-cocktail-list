@@ -26,9 +26,12 @@
         <h4>Ingredients</h4>
         <%= link_to '', new_cocktail_dose_path(@cocktail), class: "fa-solid fa-plus text-decoration-none" %>
       </div>
-      <% @cocktail.doses.each do |dose| %>
-        <p><%= dose.ingredient.name %>: <%= dose.description %></p>
-      <% end %>
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+          <li><%= dose.ingredient.name %>: <%= dose.description %></li>
+        <% end %>
+      </ul>
+      </div>
     </div>
   </div>
 </div>

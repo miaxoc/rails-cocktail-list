@@ -44,3 +44,5 @@ Ingredient.create(name: 'Espresso')
 # 1 part to 3 parts gin (to taste), 3 parts tonic water
 Ingredient.create(name: 'Gin')
 Ingredient.create(name: 'Tonic')
+
+Cocktail.create(name: 'ESPRESSOOOOO', cocktaildescription: 'The Espresso Martini is a bold and sophisticated cocktail that perfectly blends the rich flavors of coffee with the smoothness of vodka.', photo: 'aperol.webp' )
