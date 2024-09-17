@@ -7,7 +7,6 @@
     <div class="carousel" style="width: 300px;">
       <% cocktail = @cocktails.first %>
       <%= cl_image_tag(cocktail.photo.key, width: 400 ) if cocktail && cocktail.photo.attached? %>
-
     </div>
 
   <div class="right-side">
