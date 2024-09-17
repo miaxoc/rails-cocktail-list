@@ -39,3 +39,8 @@ Ingredient.create(name: 'Sugar')
 Ingredient.create(name: 'Vodka')
 Ingredient.create(name: 'Kahlúa')
 Ingredient.create(name: 'Espresso')
+
+# Gin & Tonic
+# 1 part to 3 parts gin (to taste), 3 parts tonic water
+Ingredient.create(name: 'Gin')
+Ingredient.create(name: 'Tonic')
