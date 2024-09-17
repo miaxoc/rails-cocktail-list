@@ -13,17 +13,18 @@
     <div class="right-side">
       <div class="text-title">
         <% if @cocktail.name.start_with?('A' || 'a') %>
-          <h3>What is an <%= @cocktail.name %>?</h3>
+          <h4>What is an <%= @cocktail.name %>?</h4>
         <% else %>
-          <h3>What is a <%= @cocktail.name %>?</h3>
+          <h4>What is a <%= @cocktail.name %>?</h4>
         <% end %>
       </div>
       <div id="description">
         <p><%= @cocktail.cocktaildescription %></p>
       </div>
 
-      <div class="text-title">
-        <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail) %>
+      <div class="text-title d-flex justify-content-between">
+        <h4>Ingredients</h4>
+        <%= link_to '+', new_cocktail_dose_path(@cocktail) %>
       </div>
       <% @cocktail.doses.each do |dose| %>
         <p><%= dose.ingredient.name %>: <%= dose.description %></p>

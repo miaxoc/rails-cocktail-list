@@ -31,7 +31,6 @@ Ingredient.create(name: 'Sugar')
 # Ingredient.create(name: 'Fresh lime juice')
 # Ingredient.create(name: 'Mint leaves')
 
-
 # Espresso Martini
 Ingredient.create(name: 'Vodka')
 Ingredient.create(name: 'Kahlúa')
