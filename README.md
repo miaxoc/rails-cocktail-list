@@ -1,4 +1,4 @@
-# rails-watch-list
+# rails-cocktail-list
 
 App for creating cocktail recipes and saving ingredients within these.
 
