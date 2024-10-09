@@ -7,7 +7,7 @@
 // General style
 $font-family-sans-serif: $body-font;
 $headings-font-family:   $headers-font;
-$body-bg:                #FFFDF1;
+$body-bg:                #101115;
 $font-size-base:         1rem;
 
 // Colors
@@ -28,7 +28,7 @@ $border-radius-xxl:           1rem;
 // Override other variables below!
 
 body {
-  padding: 0 100px;
+  padding: 0px;
   background-color: #FFFDF1;
 
   h1 {
@@ -48,13 +48,18 @@ body {
   }
 
   h1, h2, h3, h4 {
-    color: #000000;
+    color: #E9E9EA;
     font-weight: 700;
   }
 
   p {
-    color: #000000;
+    color: #E9E9EA;
     font-weight: 400;
 
+  }
+
+  a {
+    color: #E9E9EA;
+    font-weight: 700;
   }
 }

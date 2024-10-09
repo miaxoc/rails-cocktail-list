@@ -10,6 +10,8 @@
 
 .index-view {
 
+  padding: 0 100px;
+
   * {box-sizing: border-box;}
   body {font-family: Verdana, sans-serif;}
   .mySlides {display: none;}
@@ -42,14 +44,14 @@
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: #E9E9EA;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
   }
 
   .active {
-    background-color: #717171;
+    background-color: #D5C4FB;
   }
 
   /* Fading animation */
@@ -75,12 +77,17 @@
 
 
     .add-btn {
-      // width: 100%;
-      // background-color: #4E2FFE;
-      border: 2px solid #4E2FFE;
-      margin: 0 auto;
-      text-align: center;
-      padding: 8px;
+      // width: 68px;
+      margin: 16px;
+      padding: 6px;
+      background-color: #D5C4FB;
+      font-size: 80px;
+      line-height: 60px;
+      border-radius: 16px;
+
+      a {
+        margin: 0 auto;
+      }
     }
 
     .cards {
