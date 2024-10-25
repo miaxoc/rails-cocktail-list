@@ -1,47 +1,87 @@
-
-
-
 .show-view {
   padding: 0px;
 
-  .left-side {
-    img {
-      height: 400px;
-      margin-right: 32px;
+  .show-content {
+
+    display: flex;
+    justify-content: center;
+
+    .show-left {
+
+      .show-img {
+        position: relative;
+        background-color: #D5C4FB;
+        border-radius:16px;
+        width: 400px;
+        height: 400px;
+        margin-right: 16px;
+        margin-top: 24px;
+        img {
+          height: 400px;
+          width: 400px;
+          margin-right: 32px;
+          border-radius: 16px;
+          position: absolute;
+          left: -16px;
+          top: -16px;
+        }
+      }
+
+    }
+
+
+    .show-right {
+      text-align: start;
+      width: 700px;
+
+      .question-1, .question-2 {
+        padding: 8px;
+        h4 {
+          color: #D5C4FB;
+        }
+      }
+
+      .question-2 {
+        display: flex;
+        justify-content: space-between;
+        #plus {
+          text-decoration: none;
+        }
+      }
+
+      #description {
+        background-color: #E9E9EA;
+        padding: 24px;
+        border-radius: 16px;
+        p {
+          color: #0E0000;
+          margin: 0px;
+        }
+
+      }
+
+      ul {
+        background-color: #E9E9EA;
+        padding: 16px 24px;
+        border-radius: 16px;
+        li {
+          color: #0E0000;
+        }
+      }
+
+
+      .fa-plus{
+        display:inline-block;
+        font-size: 30px;
+        line-height: 40px;
+        color: #D5C4FB;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        vertical-align: bottom;
+      }
+
+
     }
   }
-
-
-  .right-side {
-    text-align: start;
-    width: 700px;
-
-    .text-title {
-      border: 1px solid #4E2FFE;
-      color: #4E2FFE;
-      padding: 8px;
-    }
-
-    #description {
-
-      margin-bottom: 32px;
-      color: #222125;
-      border-radius: 32px;
-      font-size: 16px;
-    }
-
-    .fa-plus{
-      display:inline-block;
-      font-size: 30px;
-      line-height: 40px;
-      color:#4E2FFE;
-      width: 40px;
-      height: 40px;
-      text-align: center;
-      vertical-align: bottom;
-    }
-
-
-  }
-
 }

@@ -4,14 +4,16 @@
     <h2><%= @cocktail.name.upcase %></h2>
   </div>
 
-  <div class="d-flex justify-content-center">
+  <div class="show-content">
 
-    <div class="left-side">
-      <%= cl_image_tag @cocktail.photo.key %>
+    <div class="show-left">
+      <div class="show-img">
+        <%= cl_image_tag @cocktail.photo.key %>
+      </div>
     </div>
 
-    <div class="right-side">
-      <div class="text-title">
+    <div class="show-right">
+      <div class="question-1">
         <% if @cocktail.name.start_with?('A' || 'a') %>
           <h4>What is an <%= @cocktail.name %>?</h4>
         <% else %>
@@ -22,16 +24,15 @@
         <p><%= @cocktail.cocktaildescription %></p>
       </div>
 
-      <div class="text-title d-flex justify-content-between">
+      <div class="question-2">
         <h4>Ingredients</h4>
-        <%= link_to '', new_cocktail_dose_path(@cocktail), class: "fa-solid fa-plus text-decoration-none" %>
+        <%= link_to '', new_cocktail_dose_path(@cocktail), class: "fa-solid fa-plus", id: "plus" %>
       </div>
       <ul>
         <% @cocktail.doses.each do |dose| %>
-          <li style="color: #E9E9EA;"><%= dose.ingredient.name %>: <%= dose.description %></li>
+          <li><%= dose.ingredient.name %>: <%= dose.description %></li>
         <% end %>
       </ul>
-      </div>
     </div>
   </div>
 </div>
