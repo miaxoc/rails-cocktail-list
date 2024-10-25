@@ -24,6 +24,8 @@
     margin: auto;
   }
 
+
+
   /* Caption text */
   .text {
 
@@ -100,6 +102,9 @@
 
       .cocktail-card {
         color: black;
+        // background-color: #E9E9EA;
+        background-color: #E9E9EA;
+        border-radius: 16px;
 
         .card-left {
           background-color: #4E2FFE;
@@ -108,6 +113,8 @@
           width: 50%;
           text-align: center;
           position: relative;
+          border-top-left-radius: 16px;
+          border-bottom-left-radius: 16px;
 
           .delete-icon {
             opacity: 0%;
@@ -123,10 +130,15 @@
         .card-right {
           margin-left: 8px;
           margin-right: 8px;
+          padding: 8px;
           height: 285px;
           width: 50%;
           position: relative;
           text-align: start;
+
+          a, p {
+            color: #101115;
+          }
 
         }
       }

@@ -5,19 +5,23 @@
   </div>
 
   <!-- Slideshow container -->
+    <div class="slideshow-container">
 
-  <div class="slideshow-container">
+      <div id="slideshow-background" style="width: 400px; height: 400px; background-color: #D5C4FB; margin: 0 auto; position: relative; border-radius: 16px;">
 
-    <% @cocktails.each do |cocktail| %>
-      <div class="mySlides fade">
-        <%= cocktail.photo.attached? ? cl_image_tag(cocktail.photo.key, style: "width: 400px; display: block; margin: auto;") : image_tag('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU', style: "width: 300px; display: block; margin: auto;") %>
+        <div style="position: absolute; left: -16px; top: -16px;">
+          <% @cocktails.each do |cocktail| %>
+            <div class="mySlides fade">
+              <%= cocktail.photo.attached? ? cl_image_tag(cocktail.photo.key, style: "width: 400px; display: block; margin: auto; border-radius: 16px; position: relative;") : image_tag('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU', style: "width: 300px; display: block; margin: auto;") %>
 
-        <div class="text"><h3><%= cocktail.name %></h3></div>
+              <div class="text"><h3><%= cocktail.name.upcase %></h3></div>
+            </div>
+          <% end %>
+        </div>
+
       </div>
-    <% end %>
 
-  </div>
-
+    </div>
   <br>
 
   <div style="text-align:center">
@@ -43,8 +47,8 @@
           </div>
 
           <div class="card-right">
-            <h3><%= link_to cocktail.name.upcase, cocktail_path(cocktail), style: "text-decoration:none; color: #E9E9EA;" %></h3>
-            <p class="text-start"><%= cocktail.cocktaildescription[0..200] %>... <%= link_to 'more',cocktail_path(cocktail), style: "text-decoration: none; color: #D5C4FB;" %> </p>
+            <h3><%= link_to cocktail.name.upcase, cocktail_path(cocktail), style: "text-decoration:none;" %></h3>
+            <p class="text-start"><%= cocktail.cocktaildescription[0..200] %>... <%= link_to 'more',cocktail_path(cocktail), style: "color: #D5C4FB;" %> </p>
 
           </div>
         </div>
