@@ -7,22 +7,18 @@
 
   <!-- Slideshow container -->
   <div class="slideshow-container">
-
-    <div id="slideshow-background" style="width: 400px; height: 400px; background-color: #D5C4FB; margin: 0 auto; position: relative; border-radius: 16px;">
-
-      <div style="position: absolute; left: -16px; top: -16px;">
+    <div id="slideshow-background">
+      <div id="slideshow-img-position">
         <% @cocktails.each do |cocktail| %>
           <div class="mySlides fade">
-            <%= cocktail.photo.attached? ? cl_image_tag(cocktail.photo.key, style: "width: 400px; display: block; margin: auto; border-radius: 16px; position: relative;") : image_tag('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU', style: "width: 300px; display: block; margin: auto;") %>
-
+            <%= cocktail.photo.attached? ? cl_image_tag(cocktail.photo.key) : "No image available" %>
             <div class="text"><h3><%= link_to cocktail.name.upcase, cocktail_path(cocktail) %></h3></div>
           </div>
         <% end %>
       </div>
-
     </div>
-
   </div>
+
   <br>
 
   <div style="text-align:center">
@@ -33,17 +29,19 @@
 
 
   <div id="cocktail-index">
-    <div class="index-head d-flex justify-content-start">
+    <div class="index-head">
       <h2>ALL COCKTAILS </h2>
       <div class="add-btn">
-        <%= link_to '+', 'cocktails/new', style:"text-decoration: none; color: #101115;" %>
+        <%= link_to '+', 'cocktails/new' %>
       </div>
     </div>
 
     <div class="cards">
       <% @cocktails.each do |cocktail| %>
-        <div class="cocktail-card d-flex">
-          <div class="card-left d-flex justify-content-center" style="background-image: url('<%= cocktail.photo.attached? ? cl_image_path(cocktail.photo.key) : image_path('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU') %>')">
+        <div class="cocktail-card">
+          <div class="card-left" style="background-image: url('<%= cocktail.photo.attached? ? cl_image_path(cocktail.photo.key) : "No image available" %>')">
+
+
           <%= link_to '', cocktail_path(cocktail), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "fa-solid fa-xmark delete-icon" %>
           </div>
 

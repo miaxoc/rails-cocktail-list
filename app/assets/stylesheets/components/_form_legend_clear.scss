@@ -8,3 +8,18 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+#form {
+  color: #E9E9EA;
+
+}
+
+#form input, #form textarea, #form select {
+  background-color: #333333; /* Dark background for input fields */
+  color: #ffffff;            /* Light text color */
+  border: 1px solid #555555; /* Subtle border for visibility */
+}
+
+#form input::placeholder, #form textarea::placeholder {
+  color: #aaaaaa; /* Light color for placeholders */
+}

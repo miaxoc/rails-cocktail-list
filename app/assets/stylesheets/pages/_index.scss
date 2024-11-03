@@ -14,7 +14,15 @@
 
   * {box-sizing: border-box;}
   body {font-family: Verdana, sans-serif;}
-  .mySlides {display: none;}
+  .mySlides {display: none;
+    img {
+      width: 400px;
+      display: block;
+      margin: auto;
+      border-radius: 16px;
+      position: relative;
+    }
+  }
   img {vertical-align: middle;}
 
   /* Slideshow container */
@@ -22,6 +30,19 @@
     max-width: 1000px;
     position: relative;
     margin: auto;
+
+    #slideshow-background {
+      width: 400px;
+      height: 400px;
+      background-color:#D5C4FB;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 16px;
+
+      #slideshow-img-position {
+        position: absolute; left: -16px; top: -16px;
+      }
+    }
   }
 
 
@@ -81,6 +102,11 @@
   #cocktail-index {
     padding-top: 40px;
 
+    .index-head {
+      display: flex;
+      justify-content: start;
+    }
+
 
     .add-btn {
       // width: 68px;
@@ -93,6 +119,8 @@
 
       a {
         margin: 0 auto;
+        text-decoration: none;
+        color: #101115;
       }
     }
 
@@ -105,13 +133,16 @@
       // column-gap: 50px;
 
       .cocktail-card {
-        color: #0E0000;
+        display: flex;
+        color: #101115;
         // background-color: #E9E9EA;
         background-color: #E9E9EA;
         border-radius: 16px;
 
         .card-left {
-          background-color: #4E2FFE;
+          display: flex;
+          justify-content: center;
+          background-color: #D5C4FB;
           background-size: cover;
           background-position: center;
           width: 50%;
@@ -125,7 +156,7 @@
             position: absolute;
             top: 16px;
             left: 16px;
-            color: white;
+            color: #D5C4FB;
             text-decoration: none;
             font-size: 32px;
           }
@@ -153,7 +184,8 @@
           position: absolute;
           top: 16px;
           left: 16px;
-          color: white;
+          color: #E9E9EA;
+          text-shadow: 2px 3px 5px #D5C4FB;
           text-decoration: none;
           font-size: 32px;
         }
