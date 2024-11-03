@@ -30,13 +30,17 @@
   .text {
 
     h3 {
-    color: #FFFFFF;
-    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+    text-shadow: 2px 3px 5px #D5C4FB;
     padding: 8px 12px;
     position: absolute;
     bottom: 0px;
     width: 100%;
     text-align: center;
+
+    a {
+      text-decoration: none;
+      color: #E9E9EA;
+    }
     }
   }
 

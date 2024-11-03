@@ -1,13 +1,18 @@
 .show-view {
   padding: 0px;
 
+  .top-text {
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
   .show-content {
 
     display: flex;
     justify-content: center;
 
     .show-left {
-
       .show-img {
         position: relative;
         background-color: #D5C4FB;
@@ -26,7 +31,6 @@
           top: -16px;
         }
       }
-
     }
 
 
